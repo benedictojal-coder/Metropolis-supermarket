@@ -1,0 +1,18 @@
+const products = [
+  { name: 'Bio Fresh Milk Semiskimmed 1l', image: '/images/images/1742558344whyD8HSJDy__Bio_Fresh_Milk_Semiskimmed_1l-1.jpeg.webp', description: 'Fresh milk', brand: 'Bio', category: 'Dairy', price: 155, countInStock: 10, rating: 0, numReviews: 0 },
+  { name: 'Brookside Dairyfresh Coffee', image: '/images/images/1742559176C9UOd9Fx7y__Brookside_Dairyfresh_Coffee-1.jpeg.webp', description: 'Coffee milk', brand: 'Brookside', category: 'Dairy', price: 60, countInStock: 5, rating: 0, numReviews: 0 },
+  { name: 'Brookside Dairybest Wholemilk', image: '/images/images/1742559176qkZYqlMe6i__Brookside_Dairybest_Wholemilk_-1.jpeg.webp', description: 'Whole milk', brand: 'Brookside', category: 'Dairy', price: 160, countInStock: 8, rating: 0, numReviews: 0 },
+  { name: 'Brookside Maziwa Lala 500g', image: '/images/images/1742559384CqgbHlcAfT__Brookside_Maziwa_Lala_500g-1.jpeg.webp', description: 'Cultured milk', brand: 'Brookside', category: 'Dairy', price: 95, countInStock: 12, rating: 0, numReviews: 0 },
+  { name: 'Butlers Delight Chicken Samosa', image: '/images/images/1742561753FwfY5ZdjHW__Butlers_Delight_Chicken_Samosa-1.jpeg.webp', description: 'Frozen samosas', brand: 'Butlers', category: 'Frozen', price: 450, countInStock: 4, rating: 0, numReviews: 0 },
+  { name: 'Snapp Apple 330ml', image: '/images/images/1742991521BdwLLKUfyF__Snapp_Apple_330ml-1-1024x1024.jpeg.webp', description: 'Apple drink', brand: 'Snapp', category: 'Beverage', price: 220, countInStock: 24, rating: 0, numReviews: 0 },
+  { name: 'Tusker Lite 500ml', image: '/images/images/1742998375gC7dToXK6F__Tusker_Lite_500ml-1-1024x1024.jpeg.webp', description: 'Beer', brand: 'Tusker', category: 'Beverage', price: 250, countInStock: 48, rating: 0, numReviews: 0 },
+  { name: 'Vaseline Blue Seal Baby Perfumed', image: '/images/images/1742999001uoy6nDhiEe__Vaseline_Blue_Seal_Baby_Perfum-1-1024x1024.jpeg.webp', description: 'Baby jelly', brand: 'Vaseline', category: 'Personal Care', price: 350, countInStock: 15, rating: 0, numReviews: 0 },
+  { name: 'Cirio Lenticchie', image: '/images/images/Cirio-Lenticchie-1024x1024.jpg.webp', description: 'Lentils', brand: 'Cirio', category: 'Canned', price: 180, countInStock: 20, rating: 0, numReviews: 0 },
+  { name: 'Colgate Kids Bubblegum Toothpaste', image: '/images/images/Colgate-Toothpaste-for-Kids-Bubblegum-Fruit-1024x1024.jpg.webp', description: 'Toothpaste', brand: 'Colgate', category: 'Personal Care', price: 210, countInStock: 10, rating: 0, numReviews: 0 },
+  { name: 'Cussons Baby Powder Vanilla 200g', image: '/images/images/Cussons-Baby-Powder-Mild-Gentle-Vanilla-200g-1024x1024.jpg.webp', description: 'Baby powder', brand: 'Cussons', category: 'Personal Care', price: 320, countInStock: 7, rating: 0, numReviews: 0 },
+  { name: 'Dairy Fresh Banana Milk 250ml', image: '/images/images/Dairy-Fresh-Banana-Flavored-Milk-250ml-1024x1024.jpg.webp', description: 'Flavored milk', brand: 'Dairy Fresh', category: 'Dairy', price: 55, countInStock: 30, rating: 0, numReviews: 0 },
+  { name: 'Kenylon Baked Beans 300g', image: '/images/images/Kenylon-Baked-Beans-in-Tomato-Sause-300g-1024x1024.jpg.webp', description: 'Baked beans', brand: 'Kenylon', category: 'Canned', price: 140, countInStock: 18, rating: 0, numReviews: 0 },
+  { name: 'New Leaf Baobab Fruit Powder 300g', image: '/images/images/New-Leaf-Baobab-Fruit-Powder-300g-1024x1024.jpg.webp', description: 'Fruit powder', brand: 'New Leaf', category: 'Health', price: 550, countInStock: 5, rating: 0, numReviews: 0 }
+];
+
+module.exports = products;
