@@ -1,19 +1,24 @@
-import connectDB from '../../backend/config/db';
-import Product from '../../backend/models/Product';
+const connectDB = require('../../backend/config/db');
+const Product = require('../../backend/models/Product');
 
-export default async function handler(req, res) {
-  await connectDB();
+module.exports = async function handler(req, res) {
+  try {
+    await connectDB();
 
-  const { id } = req.query;
+    const { id } = req.query;
 
-  if (req.method === 'GET') {
-    const product = await Product.findById(id);
-    if (product) {
-      res.status(200).json(product);
+    if (req.method === 'GET') {
+      const product = await Product.findById(id);
+      if (product) {
+        res.status(200).json(product);
+      } else {
+        res.status(404).json({ message: 'Product not found' });
+      }
     } else {
-      res.status(404).json({ message: 'Product not found' });
+      res.status(405).json({ message: 'Method not allowed' });
     }
-  } else {
-    res.status(405).json({ message: 'Method not allowed' });
+  } catch (error) {
+    console.error('Error in product detail API:', error);
+    res.status(500).json({ message: 'Server error', error: error.message });
   }
-}
+};
