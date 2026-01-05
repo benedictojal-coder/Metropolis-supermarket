@@ -19,10 +19,11 @@ app.use('/api/products', productRoutes);
 
 // Serve React frontend
 const root = path.resolve();
-app.use(express.static(path.join(root, 'frontend', 'build')));
+app.use(express.static(path.join(root, 'frontend/build')));
 
-app.get('*', (req, res) =>
-  res.sendFile(path.join(root, 'frontend', 'build', 'index.html'))
+// Correct catch-all route for React Router
+app.get('/:path(*)', (req, res) =>
+  res.sendFile(path.join(root, 'frontend/build', 'index.html'))
 );
 
 // Error Handlers
