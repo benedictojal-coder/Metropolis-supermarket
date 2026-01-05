@@ -3,32 +3,32 @@ const dotenv = require('dotenv');
 const path = require('path');
 const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
-const productRoutes = require('./routes/productRoutes'); // Import Product Routes
-const { notFound, errorHandler } = require('./middleware/errorMiddleware'); // Import Error Handlers
+const productRoutes = require('./routes/productRoutes');
+const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 
-// Establish connection to MongoDB Atlas
+// Connect to MongoDB
 connectDB();
 
 const app = express();
+app.use(express.json());
 
-// Body parser middleware: allows the server to read JSON from 'req.body'
-app.use(express.json()); 
+// API Routes
+app.use('/api/users', userRoutes);
+app.use('/api/products', productRoutes);
 
-// Feature Routes
-app.use('/api/users', userRoutes); 
-app.use('/api/products', productRoutes); // Mount Product Routes
+// Serve React frontend (after API routes)
+const __dirname1 = path.resolve();
+app.use(express.static(path.join(__dirname1, '../frontend/build')));
 
-// Basic check route
-app.get('/', (req, res) => {
-  res.send('API is running...');
-});
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname1, '../frontend/build', 'index.html'))
+);
 
-// Error Handling Middleware (must be placed after all routes)
-app.use(notFound);    // Catches 404 errors (page not found)
-app.use(errorHandler); // Catches general server errors (500)
+// Error Handlers
+app.use(notFound);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
-
 app.listen(PORT, console.log(`Server running on port ${PORT}`));
