@@ -2,7 +2,7 @@
   "name": "metropolis-supermarket-ltd",
   "version": "1.0.0",
   "description": "MERN e-commerce backend for Metropolis Supermarket Ltd",
-  "main": "server.js",
+  "main": "backend/server.js",
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
