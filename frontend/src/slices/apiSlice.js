@@ -1,10 +1,13 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-// We use an empty baseQuery because we will define the URL in a separate file
-const baseQuery = fetchBaseQuery({ baseUrl: '' });
+// Use empty string for production (relative URLs) which works with Vercel routing
+// In development, the proxy in package.json handles the routing
+const baseQuery = fetchBaseQuery({ 
+  baseUrl: process.env.NODE_ENV === 'development' ? '' : '' 
+});
 
 export const apiSlice = createApi({
   baseQuery,
-  tagTypes: ['Product', 'Order', 'User'], // Used for caching data
-  endpoints: (builder) => ({}), // We will inject endpoints from other files
+  tagTypes: ['Product', 'Order', 'User'],
+  endpoints: (builder) => ({}),
 });
