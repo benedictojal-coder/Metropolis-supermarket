@@ -8,7 +8,6 @@ const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 
-// Connect to MongoDB
 connectDB();
 
 const app = express();
@@ -18,12 +17,12 @@ app.use(express.json());
 app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
 
-// Serve React frontend (after API routes)
-const __dirname1 = path.resolve();
-app.use(express.static(path.join(__dirname1, '../frontend/build')));
+// Serve React frontend
+const root = path.resolve();
+app.use(express.static(path.join(root, 'frontend', 'build')));
 
 app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname1, '../frontend/build', 'index.html'))
+  res.sendFile(path.join(root, 'frontend', 'build', 'index.html'))
 );
 
 // Error Handlers
@@ -31,4 +30,4 @@ app.use(notFound);
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
