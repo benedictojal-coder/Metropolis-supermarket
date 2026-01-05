@@ -1,0 +1,102 @@
+const products = [
+  {
+    _id: '1',
+    name: 'Bio Fresh Milk Semiskimmed 1l',
+    image: '/images/images/1742558344whyD8HSJDy__Bio_Fresh_Milk_Semiskimmed_1l-1.jpeg.webp',
+    price: 155,
+    countInStock: 10,
+  },
+  {
+    _id: '2',
+    name: 'Brookside Dairyfresh Coffee',
+    image: '/images/images/1742559176C9UOd9Fx7y__Brookside_Dairyfresh_Coffee-1.jpeg.webp',
+    price: 60,
+    countInStock: 5,
+  },
+  {
+    _id: '3',
+    name: 'Brookside Dairybest Wholemilk',
+    image: '/images/images/1742559176qkZYqlMe6i__Brookside_Dairybest_Wholemilk_-1.jpeg.webp',
+    price: 160,
+    countInStock: 8,
+  },
+  {
+    _id: '4',
+    name: 'Brookside Maziwa Lala 500g',
+    image: '/images/images/1742559384CqgbHlcAfT__Brookside_Maziwa_Lala_500g-1.jpeg.webp',
+    price: 95,
+    countInStock: 12,
+  },
+  {
+    _id: '5',
+    name: 'Butlers Delight Chicken Samosa',
+    image: '/images/images/1742561753FwfY5ZdjHW__Butlers_Delight_Chicken_Samosa-1.jpeg.webp',
+    price: 450,
+    countInStock: 4,
+  },
+  {
+    _id: '6',
+    name: 'Snapp Apple 330ml',
+    image: '/images/images/1742991521BdwLLKUfyF__Snapp_Apple_330ml-1-1024x1024.jpeg.webp',
+    price: 220,
+    countInStock: 24,
+  },
+  {
+    _id: '7',
+    name: 'Tusker Lite 500ml',
+    image: '/images/images/1742998375gC7dToXK6F__Tusker_Lite_500ml-1-1024x1024.jpeg.webp',
+    price: 250,
+    countInStock: 48,
+  },
+  {
+    _id: '8',
+    name: 'Vaseline Blue Seal Baby Perfumed',
+    image: '/images/images/1742999001uoy6nDhiEe__Vaseline_Blue_Seal_Baby_Perfum-1-1024x1024.jpeg.webp',
+    price: 350,
+    countInStock: 15,
+  },
+  {
+    _id: '9',
+    name: 'Cirio Lenticchie',
+    image: '/images/images/Cirio-Lenticchie-1024x1024.jpg.webp',
+    price: 180,
+    countInStock: 20,
+  },
+  {
+    _id: '10',
+    name: 'Colgate Kids Bubblegum Toothpaste',
+    image: '/images/images/Colgate-Toothpaste-for-Kids-Bubblegum-Fruit-1024x1024.jpg.webp',
+    price: 210,
+    countInStock: 10,
+  },
+  {
+    _id: '11',
+    name: 'Cussons Baby Powder Vanilla 200g',
+    image: '/images/images/Cussons-Baby-Powder-Mild-Gentle-Vanilla-200g-1024x1024.jpg.webp',
+    price: 320,
+    countInStock: 7,
+  },
+  {
+    _id: '12',
+    name: 'Dairy Fresh Banana Milk 250ml',
+    image: '/images/images/Dairy-Fresh-Banana-Flavored-Milk-250ml-1024x1024.jpg.webp',
+    price: 55,
+    countInStock: 30,
+  },
+  {
+    _id: '13',
+    name: 'Kenylon Baked Beans 300g',
+    image: '/images/images/Kenylon-Baked-Beans-in-Tomato-Sause-300g-1024x1024.jpg.webp',
+    price: 140,
+    countInStock: 18,
+  },
+  {
+    _id: '14',
+    name: 'New Leaf Baobab Fruit Powder 300g',
+    image: '/images/images/New-Leaf-Baobab-Fruit-Powder-300g-1024x1024.jpg.webp',
+    price: 550,
+    countInStock: 5,
+  }
+];
+
+export default products;
